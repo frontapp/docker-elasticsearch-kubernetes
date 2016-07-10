@@ -28,3 +28,5 @@ cloud:
     namespace: ${NAMESPACE}
 discovery:
     type: kubernetes
+
+action.auto_create_index: false
