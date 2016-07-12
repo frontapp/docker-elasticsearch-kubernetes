@@ -28,3 +28,5 @@ cloud:
     namespace: ${NAMESPACE}
 discovery:
     type: kubernetes
+
+script.inline: true
