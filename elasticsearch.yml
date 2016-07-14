@@ -30,3 +30,4 @@ discovery:
     type: kubernetes
 
 script.inline: true
+discovery.zen.minimum_master_nodes: 2
