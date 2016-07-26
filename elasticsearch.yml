@@ -31,3 +31,4 @@ discovery:
 
 script.inline: true
 discovery.zen.minimum_master_nodes: 2
+action.auto_create_index: false
