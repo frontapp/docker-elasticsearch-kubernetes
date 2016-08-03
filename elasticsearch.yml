@@ -4,6 +4,7 @@ cluster:
 node:
   master: ${NODE_MASTER}
   data: ${NODE_DATA}
+  zone: ${ZONE_ID}
 
 network.publish_host: ${NETWORK_HOST}
 network.bind_host: 0.0.0.0
@@ -31,5 +32,8 @@ discovery:
     type: kubernetes
 
 script.inline: true
-discovery.zen.minimum_master_nodes: 2
 action.auto_create_index: false
+
+discovery.zen.minimum_master_nodes: 2
+cluster.routing.allocation.awareness.attributes: zone
+cluster.routing.allocation.awareness.force.zone.values: zone0,zone1,zone2
