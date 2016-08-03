@@ -1,5 +1,12 @@
 cluster:
   name: ${CLUSTER_NAME}
+  routing:
+    allocation:
+      awareness:
+        attributes: zone
+        force:
+          zone:
+            values: zone0,zone1,zone2
 
 node:
   master: ${NODE_MASTER}
@@ -29,11 +36,9 @@ cloud:
     service: ${DISCOVERY_SERVICE}
     namespace: ${NAMESPACE}
 discovery:
-    type: kubernetes
-
+    type: kubernetes,
+    zen:
+      minimum_master_nodes: 2
+      
 script.inline: true
 action.auto_create_index: false
-
-discovery.zen.minimum_master_nodes: 2
-cluster.routing.allocation.awareness.attributes: zone
-cluster.routing.allocation.awareness.force.zone.values: zone0,zone1,zone2
