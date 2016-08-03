@@ -36,9 +36,9 @@ cloud:
     service: ${DISCOVERY_SERVICE}
     namespace: ${NAMESPACE}
 discovery:
-    type: kubernetes,
+    type: kubernetes
     zen:
       minimum_master_nodes: 2
-      
+
 script.inline: true
 action.auto_create_index: false
