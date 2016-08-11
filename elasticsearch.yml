@@ -9,6 +9,7 @@ cluster:
             values: zone0,zone1,zone2
 
 node:
+  name: ${HOSTNAME}
   master: ${NODE_MASTER}
   data: ${NODE_DATA}
   zone: ${ZONE_ID}
