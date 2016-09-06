@@ -36,6 +36,11 @@ cloud:
   kubernetes:
     service: ${DISCOVERY_SERVICE}
     namespace: ${NAMESPACE}
+  azure:
+    storage:
+      account: ${AZURE_STORAGE_ACCOUNT}
+      key: ${AZURE_STORAGE_KEY}
+
 discovery:
     type: kubernetes
     zen:
