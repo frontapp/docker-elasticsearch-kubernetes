@@ -1,5 +1,12 @@
 cluster:
   name: ${CLUSTER_NAME}
+  routing:
+    allocation:
+      awareness:
+        attributes: zone
+        force:
+          zone:
+            values: zone0,zone1,zone2
 
 node:
   master: ${NODE_MASTER}
@@ -24,7 +31,17 @@ http:
     enabled: ${HTTP_CORS_ENABLE}
     allow-origin: ${HTTP_CORS_ALLOW_ORIGIN}
 
+cloud:
+  azure:
+    storage:
+      account: ${AZURE_STORAGE_ACCOUNT}
+      key: ${AZURE_STORAGE_KEY}
+
 discovery:
   zen:
     ping.unicast.hosts: ${DISCOVERY_SERVICE}
     minimum_master_nodes: ${NUMBER_OF_MASTERS}
+
+
+script.inline: true
+action.auto_create_index: false
