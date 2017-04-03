@@ -10,4 +10,4 @@ ENV NAMESPACE default
 ENV DISCOVERY_SERVICE elasticsearch-discovery
 
 # Plugins to install on launch
-ENV ES_PLUGINS_INSTALL "repository-azure,analysis-icu,analysis-kuromoji,lmenezes/elasticsearch-kopf/2.1.2"
+ENV ES_PLUGINS_INSTALL "repository-azure,analysis-icu,analysis-kuromoji"
