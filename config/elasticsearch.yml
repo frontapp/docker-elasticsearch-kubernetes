@@ -39,15 +39,10 @@ cloud:
       account: ${AZURE_STORAGE_ACCOUNT}
       key: ${AZURE_STORAGE_KEY}
 
-repositories.azure:
-  container: elasticsearch
-  compress: true
-
 discovery:
   zen:
     ping.unicast.hosts: ${DISCOVERY_SERVICE}
     minimum_master_nodes: ${NUMBER_OF_MASTERS}
-
 
 script.inline: true
 action.auto_create_index: false
