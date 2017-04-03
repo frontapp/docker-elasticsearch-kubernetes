@@ -16,6 +16,8 @@ node:
   max_local_storage_nodes: ${MAX_LOCAL_STORAGE_NODES}
 
 network.host: ${NETWORK_HOST}
+network.publish_host: ${NETWORK_HOST}
+network.bind_host: 0.0.0.0
 
 path:
   data: /data/data
