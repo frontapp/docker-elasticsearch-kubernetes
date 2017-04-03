@@ -36,8 +36,10 @@ http:
 cloud:
   azure:
     storage:
-      account: ${AZURE_STORAGE_ACCOUNT}
-      key: ${AZURE_STORAGE_KEY}
+      azure_backups:
+        account: ${AZURE_STORAGE_ACCOUNT}
+        key: ${AZURE_STORAGE_KEY}
+        default: true
 
 discovery:
   zen:
