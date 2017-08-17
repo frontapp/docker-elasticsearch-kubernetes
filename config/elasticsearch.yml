@@ -4,15 +4,16 @@ cluster:
     allocation:
       awareness:
         attributes: zone
-          force:
-            zone:
-              values: zone0,zone1,zone2
+        force:
+          zone:
+            values: zone0,zone1,zone2
 
 node:
   master: ${NODE_MASTER}
   data: ${NODE_DATA}
-  name: ${NODE_NAME}
+  name: ${HOSTNAME}
   ingest: ${NODE_INGEST}
+  zone: ${ZONE_ID}
   max_local_storage_nodes: ${MAX_LOCAL_STORAGE_NODES}
 
 network.host: ${NETWORK_HOST}
