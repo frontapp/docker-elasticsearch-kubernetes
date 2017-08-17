@@ -13,8 +13,9 @@ node:
   data: ${NODE_DATA}
   name: ${HOSTNAME}
   ingest: ${NODE_INGEST}
-  zone: ${ZONE_ID}
   max_local_storage_nodes: ${MAX_LOCAL_STORAGE_NODES}
+  attr:
+    zone: ${ZONE_ID}
 
 network.host: ${NETWORK_HOST}
 network.publish_host: ${NETWORK_HOST}
